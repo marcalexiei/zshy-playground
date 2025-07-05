@@ -7,7 +7,8 @@
     }
   },
   "scripts": {
-    "build": "zshy"
+    "build": "zshy",
+    "typecheck": "tsc --noEmit"
   },
   "files": [
     "dist"

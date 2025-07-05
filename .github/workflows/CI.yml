@@ -31,5 +31,8 @@ jobs:
         with:
           node-version: 24
 
+      - name: Typecheck
+        run: pnpm run --filter="${{ matrix.scenario }}" typecheck
+
       - name: Build
-        run: pnpm run build:${{ matrix.scenario }}
+        run: pnpm run --filter="${{ matrix.scenario }}" build
