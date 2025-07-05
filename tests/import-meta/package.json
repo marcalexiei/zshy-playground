@@ -1,0 +1,25 @@
+{
+  "name": "import-meta",
+  "type": "module",
+  "zshy": {
+    "exports": {
+      ".": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "zshy"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  }
+}

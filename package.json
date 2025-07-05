@@ -1,0 +1,17 @@
+{
+  "name": "zshy-playground",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "ppnpm run -r build",
+    "build:import-meta": "pnpm --filter=import-meta run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "devDependencies": {
+    "zshy": "0.0.13"
+  }
+}
