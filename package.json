@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "ppnpm run -r build",
+    "build": "pnpm run -r build",
     "build:import-meta": "pnpm --filter=import-meta run build"
   },
   "keywords": [],
