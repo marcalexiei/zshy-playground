@@ -13,8 +13,8 @@ permissions:
   contents: read
 
 jobs:
-  test:
-    name: Test "${{ matrix.scenario }}" scenario
+  test-build:
+    name: Test "${{ matrix.scenario }}" build scenario
     runs-on: ubuntu-latest
 
     strategy:
@@ -36,3 +36,27 @@ jobs:
 
       - name: Build
         run: pnpm run --filter="${{ matrix.scenario }}" build
+
+  test-attw:
+    name: Test "${{ matrix.scenario }}" attw scenario
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        scenario:
+          - masquerading-cjs
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependencies
+        with:
+          node-version: 24
+
+      - name: Build
+        run: pnpm run --filter="${{ matrix.scenario }}" build
+
+      - name: Test types with attw
+        run: pnpm run --filter="${{ matrix.scenario }}" check-types
