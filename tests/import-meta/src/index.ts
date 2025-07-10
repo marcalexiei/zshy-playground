@@ -1,5 +1,5 @@
-const packageJSON = JSON.parse(
-  (new URL("../package.json", import.meta.url), "utf8")
-);
+const packageJSONPath = new URL("../package.json", import.meta.url);
 
-export { packageJSON };
+console.info(packageJSONPath);
+
+export { packageJSONPath };

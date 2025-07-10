@@ -12,6 +12,6 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
-    "zshy": "0.0.13"
+    "zshy": "0.0.15"
   }
 }
