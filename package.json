@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run -r build",
-    "build:import-meta": "pnpm --filter=import-meta run build",
-    "build:masquerading-cjs": "pnpm --filter=masquerading-cjs run build"
+    "build:import-meta": "pnpm --filter=import-meta run build"
   },
   "keywords": [],
   "author": "",
